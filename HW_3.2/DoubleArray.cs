@@ -33,9 +33,9 @@ namespace HW_3._2
         private override void FillByUser()
         {
             Console.WriteLine("Введите элементы массива:");
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < a.GetLength(0); i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < a.GetLength(1); j++)
                 {
                     a[i, j] = int.Parse(Console.ReadLine());
                 }
@@ -45,9 +45,9 @@ namespace HW_3._2
         private override void RandFill()
         {
             Random rnd = new Random();
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < a.GetLength(0); i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < a.GetLength(1); j++)
                 {
                     a[i, j] = rnd.Next(1000);
                 }
@@ -71,14 +71,14 @@ namespace HW_3._2
         {
             Console.WriteLine("Среднее значение элементов двумерного массива:");
             double sum = 0;
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < a.GetLength(0); i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < a.GetLength(1); j++)
                 {
                     sum += a[i, j];
                 }
             }
-            Console.WriteLine(sum / (m * n));
+            Console.WriteLine(sum / (a.GetLength(0) * a.GetLength(1)));
         }
     }
 }
