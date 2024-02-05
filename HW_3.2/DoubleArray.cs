@@ -30,7 +30,7 @@ namespace HW_3._2
             }
         }
 
-        public override void FillByUser()
+        private override void FillByUser()
         {
             Console.WriteLine("Введите элементы массива:");
             for (int i = 0; i < n; i++)
@@ -42,7 +42,7 @@ namespace HW_3._2
             }
         }
 
-        public override void RandFill()
+        private override void RandFill()
         {
             Random rnd = new Random();
             for (int i = 0; i < n; i++)
